@@ -1,0 +1,93 @@
+.currency {
+  width: 100%;
+  height: 90vh;
+}
+
+.currency__header {
+  width: 100%;
+  display: flex;
+  height: 10vh;
+  align-items: center;
+}
+
+.currency__headerOptions {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currency__headerOptions label {
+  color: #4b6584;
+  font-weight: 800;
+}
+
+.currency__headerOptionsMenu {
+  margin-left: 10px;
+}
+
+.currency__headerMessage {
+  width: 50%;
+  text-align: center;
+  color: #4b6584;
+}
+
+.currency__headerMessageBase,
+.currency__headerMessagePicked {
+  color: #fc5c65;
+}
+
+.currency__charts {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70vh;
+  width: 100%;
+}
+
+@media only screen and (max-width: 805px) {
+  .currency {
+    height: 150vh;
+  }
+
+  .currency__header {
+    display: block;
+  }
+
+  .currency__headerOptions {
+    margin: 10px auto;
+  }
+
+  .currency__headerMessage {
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0.3vh solid;
+    border-image-source: linear-gradient(
+      to bottom right,
+      rgba(209, 216, 224, 0.4),
+      rgba(56, 103, 214, 0.4)
+    );
+    border-image-slice: 1;
+  }
+
+  .currency__charts {
+    margin-top: 20px;
+    display: block;
+  }
+  .currency__charts div {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .currency__headerMessage {
+    font-size: 20px;
+  }
+  .currency__headerOptions {
+    font-size: 13px;
+  }
+}

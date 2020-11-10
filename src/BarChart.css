@@ -1,0 +1,10 @@
+.barChart {
+  position: relative;
+  width: 40%;
+  height: 90%;
+}
+
+.barChartHome__context,
+.barChartCurrency__context {
+  width: 100%;
+}

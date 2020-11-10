@@ -1,0 +1,54 @@
+.navbar {
+  background-color: #2bcbba;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.navbar a {
+  color: #4b6584;
+  text-decoration: none;
+  font-size: 25px;
+  transition: 0.3s background-color;
+  text-align: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  flex-grow: 1;
+  height: 7.5vh;
+  line-height: 7.5vh;
+}
+
+.navbar .navbar__--active {
+  background-color: #4cd137 !important;
+}
+
+.navbar a:hover {
+  background-color: #20bf6b;
+}
+
+.navbar__conversionLink {
+  background-color: #4cd137;
+  border-left: 4px solid #2bcbba;
+}
+
+@media only screen and (max-width: 805px) {
+  .navbar {
+    transform: translateY(-100%);
+    display: block;
+    width: 100%;
+  }
+  .navbar.navbar--active {
+    transform: translateY(0);
+  }
+  .navbar a {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .navbar a {
+    font-size: 16px;
+  }
+}

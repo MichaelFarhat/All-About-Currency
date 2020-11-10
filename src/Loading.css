@@ -1,0 +1,38 @@
+.loading__home,
+.loading__currency {
+  color: #4b6584;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+
+.loading__currency {
+  margin: 10vh auto;
+  width: fit-content;
+}
+
+.loading__arrow {
+  animation-name: turn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-450deg);
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .loading__currency,
+  .loading__home {
+    font-size: 25px;
+  }
+}

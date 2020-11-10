@@ -1,38 +1,148 @@
-.App {
+body {
+  background-color: #d1d8e0;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.2vh;
+  padding: 0 40px;
+  border-bottom: 0.3vh solid;
+  border-image-source: linear-gradient(
+    to bottom right,
+    rgba(209, 216, 224, 0.4),
+    rgba(56, 103, 214, 0.4)
+  );
+  border-image-slice: 1;
+}
+
+.app__headerLogo {
+  color: #3867d6;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__headerBaseMessage {
+  color: #3867d6;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app__baseCurrency {
+  cursor: pointer;
+  color: #4cd137;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.app__content {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 85vh;
+}
+
+.slide {
+  position: absolute;
+  transition: all 0.4s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  top: 0;
+  height: 85vh;
+  background-color: #d1d8e0;
+}
+
+.on {
+  z-index: 1 !important;
+  left: 0;
+}
+
+.app__failure {
+  margin: 20px auto;
+  width: 50%;
+  color: #eb3b5a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app__toggleNav {
+  border-radius: 50%;
+  background-color: #20bf6b;
+  width: 35px;
+  height: 35px;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px auto;
+  position: relative;
+  display: none;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.app__toggleNav span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  color: #d1d8e0;
+  user-select: none;
+  transition: all 0.3s;
+}
+
+.app__toggleNav:hover span {
+  color: #eb3b5a;
+}
+
+.app__toggleNav:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 805px) {
+  .app__content {
+    height: 150vh;
+  }
+
+  .app__toggleNav {
+    display: block;
+    margin-top: -160px;
+  }
+  .app__toggleNav--active {
+    margin-top: 10px;
+    transform: rotate(180deg);
+  }
+  .app__header {
+    display: block;
+    height: unset;
+  }
+  .app__headerLogo {
+    margin-bottom: 5vw;
+    border-bottom: 0.3vh solid;
+    border-image-source: linear-gradient(
+      to bottom right,
+      rgba(209, 216, 224, 0.4),
+      rgba(56, 103, 214, 0.4)
+    );
+    border-image-slice: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 330px) {
+  .app__headerLogo,
+  .app__headerBaseMessage {
+    font-size: 13px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-height: 658px) {
+  .app__toggleNav {
+    margin-top: -24vh;
+  }
+  .app__toggleNav--active {
+    margin-top: 5px;
   }
 }
